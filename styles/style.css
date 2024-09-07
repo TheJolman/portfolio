@@ -4,6 +4,12 @@
   --subtext-color-1: #b5bfe2;
   --lavender: #babbf1;
   --blue: #8caaee;
+  --rosewater: #f2d5cf;
+  --flamingo: #eebebe;
+  --sapphire: #85c1dc;
+  --sky: #99d1db;
+  --muave: #ca9ee6;
+  --pink: #f4b8e4;
 }
 
 html {
@@ -23,4 +29,15 @@ body {
 
 a {
   color: var(--blue);
+}
+
+h1 {
+  color: var(--subtext-color-1);
+}
+h3 {
+  color: var(--lavender);
+}
+
+h4 {
+  color: var(--lavender);
 }
