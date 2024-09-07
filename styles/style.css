@@ -1,0 +1,26 @@
+:root {
+  --background-color: #303446;
+  --text-color: #c6d0f5;
+  --subtext-color-1: #b5bfe2;
+  --lavender: #babbf1;
+  --blue: #8caaee;
+}
+
+html {
+  background-color: var(--background-color);
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  color: var(--text-color);
+  width: 50%;
+  max-width: 800px;
+  min-width: 480px;
+  margin: 0 auto;
+}
+
+a {
+  color: var(--blue);
+}
