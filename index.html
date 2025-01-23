@@ -1,69 +1,96 @@
 <!doctype html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css" />
-    <title>My Portfolio</title>
-  </head>
-  <body>
-    <div class="container">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css" />
+  <title>My Portfolio</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
       <h1>Joshua Holman</h1>
-      <p>Hi there. I am a Computer Science student at CSU, Fullerton (Aug 2023 - Dec 2025 expected).
-      I also work as math tutor in my free time.</p>
+    </header>
 
-      <h3 class="section-title">Some Links</h3>
-      <a href="https://www.github.com/TheJolman">My GitHub.</a>
-      <br>
-      <a href="https://www.linkedin.com/in/joshua-holman-685a39244/">My Linkedin.</a>
+    <main>
+      <section class="intro">
 
-      <h3 class="section-title">Relevant Coursework</h3>
-      <li>Artifical Intelligence</li>
-      <li>Data Science</li>
-      <li>Database Systems</li>
-      <li>Operating Systems</li>
-      <li>Numerical Analysis</li>
+        <p>Hi there. I am a Computer Science student at CSU, Fullerton (Aug 2023 - Dec 2025
+          expected).
+          I also work as math tutor in my free time.</p>
 
-      <h3 id="section-title">My Interests</h3>
-      <li>Open Source Software Development</li>
-      <li>Data Science and ML</li>
-      <li>Operating Systems</li>
-      <li>Linux, especially NixOS</li>
-      <li>Mathematics</li>
-
-      <div id="skills-container">
-        <h3 id="section-title">Technical Skills</h4>
-        <li>Strongest languages: Python, C++, C</li>
-        <li>Other languages: Java, Javascript, bash</li>
-        <li>HTML/CSS</li>
-        <li>Nix</li>
-        <li>Linux, Vim</li>
-        <li>Django (a little bit)</li>
-      </div>
-
-
-      <h3 id="section-title">Notable Projects</h3>
-      <div class="project-card">
-
-        <h4>Dumps Or Fire</h4>
-        <p>This is a website that was developed with with a group, it uses data from the Spotify API to rate songs, albums, and playlists based on popularity.</p>
-        <a href="https://jolman.pythonanywhere.com/">Site Link.</a>
+        <h3 class="section-title">Some Links</h3>
+        <a href="https://www.github.com/TheJolman">My GitHub.</a>
         <br>
-        <a href="https://BCSchool/Software-Project">GitHub Repo.</a>
-        <p>We used Python with Django for all of this app's logic, keeping the front end simple with vanilla html/css/js. Hosted on Python Anywhere.</p>
-      </div>
+        <a href="https://www.linkedin.com/in/joshua-holman-685a39244/">My Linkedin.</a>
+      </section>
 
-      <div class="project-card">
-        <h4>Task</h4>
-        <p>Fairly standard yet robust task management cli I wrote with C++ for my own needs. Made it easily available/downloadable on GitHub to get a feel for how software is released.</p>
-        <a href="https://TheJolman/task">GitHub Repo.</a>
-      </div>
+      <section class="education">
+        <h3 class="section-title">Relevant Coursework</h3>
+        <ul class="class-list">
+          <li>Artifical Intelligence</li>
+          <li>Machine Learning</li>
+          <li>Data Science</li>
+          <li>Database Systems</li>
+          <li>Operating Systems</li>
+        </ul>
+      </section>
 
-    </div>
+      <section class="interests">
+        <h3 class="section-title">My Technical Interests</h3>
+        <ul class="interests-list">
+          <li>Open Source Software Development</li>
+          <li>Compilers</li>
+          <li>Systems Programming</li>
+          <li>Data Science and ML</li>
+          <li>Mathematics</li>
+        </ul>
+      </section>
 
-  </body>
+      <section class="skills">
+        <h3 class="section-title">Technical Skills</h3>
+        <ul class="skills-list">
+          <li>Python, C/C++, Java, Go, Lua, bash, SQL, Matlab</li>
+          <li>Django, FastAPI, Python DS/ML libraries</li>
+          <li>Nix/NixOS, Linux, Docker</li>
+          <li>GitHub Actions, Vim</li>
+        </ul>
+      </section>
 
+      <section class="projects">
+        <h3 class="section-title">Notable Projects</h3>
+        <div class="project-card">
+
+          <h4>Dumps or Fire</h4>
+          <p>This is a website that was developed with with a group, it uses data from the Spotify
+            API
+            to rate songs, albums, and playlists based on popularity.</p>
+          <a href="https://jolman.pythonanywhere.com/">Site Link.</a>
+          <br>
+          <a href="https://BCSchool/Software-Project">GitHub Repo.</a>
+          <p>We used Python with Django for all of this app's logic, keeping the front end simple
+            with
+            vanilla html/css/js. Hosted on pythonanywhere.com.</p>
+        </div>
+
+        <div class="project-card">
+          <h4>Terminder</h4>
+          <p>Fairly standard yet robust task management cli I wrote with C++ for my own needs.
+            Available
+            on GitHub.
+            Written with C++. Used Cereal for keeping tasks persistent.</p>
+          <a href="https://TheJolman/terminder-or-fire">GitHub Repo.</a>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
 </html>
