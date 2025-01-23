@@ -10,23 +10,21 @@
     href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css" />
+  <script src="scripts/script.js" defer></script>
   <title>My Portfolio</title>
 </head>
 
 <body>
   <div class="container">
-
     <header>
       <h1>Joshua Holman</h1>
     </header>
 
     <main>
       <section class="intro">
-
         <p>Hi there. I am a Computer Science student at CSU, Fullerton (Aug 2023 - Dec 2025
           expected).
           I also work as math tutor in my free time.</p>
-
         <h3 class="section-title">Some Links</h3>
         <a href="https://www.github.com/TheJolman">My GitHub.</a>
         <br>
@@ -67,30 +65,38 @@
 
       <section class="projects">
         <h3 class="section-title">Notable Projects</h3>
-        <div class="project-card">
-
-          <h4>Dumps or Fire</h4>
-          <p>This is a website that was developed with with a group, it uses data from the Spotify
-            API
-            to rate songs, albums, and playlists based on popularity.</p>
-          <a href="https://jolman.pythonanywhere.com/">Site Link.</a>
-          <br>
-          <a href="https://BCSchool/Software-Project">GitHub Repo.</a>
-          <p>We used Python with Django for all of this app's logic, keeping the front end simple
-            with
-            vanilla html/css/js. Hosted on pythonanywhere.com.</p>
+        <div class="project-card" onclick="toggleProject(this)">
+          <div class="project-preview">
+            <h3>Dumps or Fire</h3>
+            <p>This is a website that was developed with with a group, it uses data from the
+              Spotify API to rate songs, albums, and playlists based on popularity.</p>
+            <span class="expand-hint">Click to see more...</span>
+          </div>
+          <div class="project-details hidden">
+            <a href="https://jolman.pythonanywhere.com/">Site Link.</a>
+            <br>
+            <a href="https://BCSchool/Software-Project">GitHub Repo.</a>
+            <p>We used Python with Django for all of this app's logic, keeping the front end
+              simple
+              with
+              vanilla html/css/js. Hosted on pythonanywhere.com.</p>
+          </div>
         </div>
 
-        <div class="project-card">
-          <h4>Terminder</h4>
-          <p>Fairly standard yet robust task management cli I wrote with C++ for my own needs.
-            Available
-            on GitHub.
-            Written with C++. Used Cereal for keeping tasks persistent.</p>
-          <a href="https://TheJolman/terminder-or-fire">GitHub Repo.</a>
+        <div class="project-card" onclick="toggleProject(this)">
+          <div class="project-preview" onclick="toggleProject(this)">
+            <h3>Terminder</h3>
+            <p>Fairly standard yet robust task management cli I wrote with C++ for my own needs.
+              Written with C++. Used Cereal for keeping tasks persistent.</p>
+            <span class="expand-hint">Click to see more...</span>
+          </div>
+          <div class="project-details hidden">
+            <a href="https://TheJolman/terminder-or-fire">GitHub Repo.</a>
+          </div>
         </div>
       </section>
     </main>
   </div>
 </body>
+
 </html>

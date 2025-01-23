@@ -12,7 +12,6 @@
   --pink: #f4b8e4;
 }
 
-
 body {
   color: var(--text-color);
   width: 90%;
@@ -58,7 +57,7 @@ a:hover {
 }
 
 h1 {
-  color: var(--subtext-color-1);
+  color: var(--lavender);
 }
 h3 {
   color: var(--lavender);
@@ -76,6 +75,16 @@ h4 {
   transition: all 0.3s ease;
   border: 1px solid transparent;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.expand-hint {
+  color: var(--pink);
+  font-style: italic;
 }
 
 .project-card:hover {
