@@ -1,30 +1,106 @@
 :root {
-  --background-color: #303446;
-  --text-color: #c6d0f5;
-  --subtext-color-1: #b5bfe2;
-  --lavender: #babbf1;
-  --blue: #8caaee;
+  /*catppuccin frappe colorscheme*/
   --rosewater: #f2d5cf;
   --flamingo: #eebebe;
-  --sapphire: #85c1dc;
-  --sky: #99d1db;
-  --muave: #ca9ee6;
   --pink: #f4b8e4;
+  --muave: #ca9ee6;
+  --red: #e78284;
+  --maroon: #ea999c;
+  --peach: #ef9f76;
+  --yellow: #e5c890;
+  --green: #a6d189;
+  --teal: #81c8be;
+  --sky: #99d1db;
+  --sapphire: #85c1dc;
+  --blue: #8caaee;
+  --lavender: #babbf1;
+  --text: #c6d0f5;
+  --subtext-1: #b5bfe2;
+  --subtext-0: #a5adce;
+  --overlay-2: #949cbb;
+  --overlay-1: #838ba7;
+  --overlay-0: #737994;
+  --surface-1: #51576d;
+  --surface-0: #414559;
+  --base: #303446;
+  --mantle: #292c3c;
+  --crust: #232634;
+}
+
+#my-name {
+  padding-top: 80px;
+  margin-top: 0px;
 }
 
 body {
-  color: var(--text-color);
+  color: var(--text);
   width: 90%;
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
-  padding: 20px;
+  padding: 0;
+}
+
+.profile-link {
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 6px 12px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  font-size: 0.9em;
+  transition: all 0.2s ease;
+}
+
+.profile-link:last-child {
+  margin-right: 0;
+}
+
+.profile-link:hover {
+  background-color: rgba(140, 170, 238, 0.1);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: var(--blue);
 }
 
 @media (min-width: 768px) {
   body {
     width: 70%;
   }
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: var(--mantle);
+  padding: 15px 0;
+  margin-bottom: 30px;
+  backdrop-filter: blur(5px);
+  z-index: 100;
+  border-bottom: 1px solid var(--lavender);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--blue);
+  background-color: var(--surface-0);
+  text-decoration: none;
 }
 
 .container {
@@ -45,6 +121,82 @@ body {
   gap: 20px;
 }
 
+.class-list,
+.interests-list,
+.skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+.class-list li,
+.interests-list li,
+.skills-list li {
+  background-color: var(--mantle);
+  margin: 6px 0;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.class-list li:hover,
+.interests-list li:hover,
+.skills-list li:hover {
+  border-color: var(--blue);
+  transform: translateX(5px);
+  background-color: var(--surface-0);
+}
+.class-list li,
+.interests-list li,
+.skills-list li {
+  background-color: rgba(42, 42, 64, 0.3);
+  margin: 6px 0;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.class-list li:hover,
+.interests-list li:hover,
+.skills-list li:hover {
+  border-color: var(--lavender);
+  transform: translateX(5px);
+  background-color: rgba(53, 53, 85, 0.3);
+}
+
+.class-list li::before,
+.interests-list li::before,
+.skills-list li::before {
+  content: "•";
+  color: var(--blue);
+  position: absolute;
+  left: 4px;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.class-list li:hover::before,
+.interests-list li:hover::before,
+.skills-list li:hover::before {
+  opacity: 1;
+  left: 6px;
+  color: var(--blue);
+  position: absolute;
+  left: 8px;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.class-list li:hover::before,
+.interests-list li:hover::before,
+.skills-list li:hover::before {
+  opacity: 1;
+  left: 6px;
+}
+
 a {
   color: var(--blue);
   text-decoration: none;
@@ -56,6 +208,9 @@ a:hover {
   text-decoration: underline;
 }
 
+h1, h3, h4 {
+  color: var(--blue);
+}
 h1 {
   color: var(--lavender);
 }
@@ -67,6 +222,16 @@ h4 {
   color: var(--lavender);
 }
 
+.project-card {
+  background-color: var(--mantle);
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
 .project-card {
   background-color: #2a2a40;
   border-radius: 8px;
@@ -89,6 +254,11 @@ h4 {
 
 .project-card:hover {
   transform: translateY(-5px);
+  border-color: var(--blue);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.project-card:hover {
+  transform: translateY(-5px);
   border-color: var(--lavender);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
@@ -103,6 +273,10 @@ h4 {
   color: var(--subtext-color-1)
 }
 
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--blue) var(--mantle)
+}
 * {
   scrollbar-width: auto;
   scrollbar-color: var(--pink) #2a2a40

@@ -15,20 +15,28 @@
 </head>
 
 <body>
-  <div class="container">
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="#top">Top</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About Me</a>
+    </div>
+  </nav>
+  <div class="container" id="top">
     <header>
-      <h1>Joshua Holman</h1>
+      <h1 id="my-name">Joshua Holman</h1>
     </header>
 
     <main>
       <section class="intro">
         <p>Hi there. I am a Computer Science student at CSU, Fullerton (Aug 2023 - Dec 2025
           expected).
-          I also work as math tutor in my free time.</p>
-        <h3 class="section-title">Some Links</h3>
-        <a href="https://www.github.com/TheJolman">My GitHub.</a>
-        <br>
-        <a href="https://www.linkedin.com/in/joshua-holman-685a39244/">My Linkedin.</a>
+          I also work part-time as a math tutor.</p>
+        <a href="https://www.github.com/TheJolman" class="profile-link">My GitHub.</a>
+        <a href="https://www.linkedin.com/in/joshua-holman-685a39244/" class="profile-link">My
+          Linkedin.</a>
+        <a href="https://github.com/TheJolman/resume/blob/main/resume.pdf" class="profile-link">My
+          Resume (PDF).</a>
       </section>
 
       <section class="education">
@@ -63,7 +71,7 @@
         </ul>
       </section>
 
-      <section class="projects">
+      <section class="projects" id="projects">
         <h3 class="section-title">Notable Projects</h3>
         <div class="project-card" onclick="toggleProject(this)">
           <div class="project-preview">
@@ -94,6 +102,19 @@
             <a href="https://TheJolman/terminder-or-fire">GitHub Repo.</a>
           </div>
         </div>
+      </section>
+
+      <section class="about" id="about">
+        <h3 class="section-title">More About Me</h3>
+        <p>While a full time student, I love to write code whenever I can and aspire to be
+          a major contributor in the open source community. Open source is everything to me,
+          without it I wouldn't be able to tinker with my NixOS or Neovim configs as much
+          I do, and I wouldn't be constantly blown away by all the cool things that solo
+          developers, small teams, and loose groups of contributors can create.</p>
+
+        <p>Outside of software, I love to do math, skateboard and snowboard, and read.</p>
+
+        <p>Feel free to reach out to me through any of the platforms linked above!</p>
       </section>
     </main>
   </div>
